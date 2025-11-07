@@ -3,17 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { provideHttpClient } from '@angular/common/http';
+import { PersonasapiComponent } from './components/personasapi.component/personasapi.component';
+import { ServicePersonas } from './services/service.personas';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    PersonasapiComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient(),
+    ServicePersonas
   ],
   bootstrap: [App]
 })
