@@ -16,13 +16,10 @@ export class PersonasapiComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    // this._service.getPersona().subscribe(response=>{
-    //   console.log(response);
-    //   this.personas = response;
-    // })
-    this._service.getPersonasPromise().then(response=>{
-      this.personas = response
-    });
+    this._service.getPersona().subscribe(response=>{
+      console.log(response);
+      this.personas = response;
+    })
   }
 
 }
