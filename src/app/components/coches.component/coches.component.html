@@ -1,0 +1,29 @@
+<div>
+    <div
+        class="table-responsive"
+    >
+        <table
+            class="table table-primary"
+        >
+            <thead>
+                <tr>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Conductor</th>
+                    <th scope="col">Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(coche of coches; track coche){
+                    <tr class="">
+                        <td scope="row">{{coche.marca}}</td>
+                        <td>{{coche.modelo}}</td>
+                        <td>{{coche.conductor}}</td>
+                        <td><img src="{{coche.imagen}}" style="width: 150px; height: 100px;"></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+</div>
