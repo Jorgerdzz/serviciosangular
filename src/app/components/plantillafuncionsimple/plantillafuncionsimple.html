@@ -1,0 +1,46 @@
+<div>
+
+    <form #plantillaForm="ngForm">
+        <select #selectfuncion name="selectfuncion" class="form-select" >
+            @for(funcion of funciones; track funcion){
+                <option>{{funcion}}</option>
+            }
+        </select>
+        <button (click)="getPlantillas()">Mostrar plantilla</button>
+    </form>
+
+    <div
+        class="table-responsive"
+    >
+        <table
+            class="table table-primary"
+        >
+            <thead>
+                <tr>
+                    <th scope="col">Id empleado</th>
+                    <th scope="col">Hospital</th>
+                    <th scope="col">Sala</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Funcion</th>
+                    <th scope="col">Turno</th>
+                    <th scope="col">Salario</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(plant of plantilla; track plant){
+                    <tr class="">
+                        <td>{{plant.idEmpleado}}</td>
+                        <td>{{plant.idHospital}}</td>
+                        <td>{{plant.idSala}}</td>
+                        <td>{{plant.apellido}}</td>
+                        <td>{{plant.funcion}}</td>
+                        <td>{{plant.turno}}</td>
+                        <td>{{plant.salario}}</td>
+                    </tr>
+                }
+                
+            </tbody>
+        </table>
+    </div>
+    
+</div>
